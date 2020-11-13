@@ -1,11 +1,18 @@
-
-  <h1>Welcome to Mister Cocktail</h1>
-  <div class="cards">
-    <% @cocktails.each do |cocktail| %>
-      <div class=card-product>
-      <h2> <%= link_to(cocktail.name, cocktail_path(cocktail.id)) %> </h2>
-      </div>
-    <% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path("tsgtlhwq2almo3ynhogg") %>);">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-ghost"
+      <%= link_to "Add a cocktail", new_cocktail_path %>
   </div>
+</div>
 
-  <%= link_to "new cocktail", new_cocktail_path %>
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+    <div class=card-product>
+    <h2> <%= link_to(cocktail.name, cocktail_path(cocktail.id)) %> </h2>
+    </div>
+  <% end %>
+</div>
+
+
